@@ -1,0 +1,178 @@
+import React from "react";
+
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-slate-50 text-slate-900">
+      {/* Header */}
+      <header className="bg-slate-900 text-white py-16 px-6 text-center">
+        <h1 className="text-4xl md:text-5xl font-bold">Manasa Raghuraman</h1>
+        <p className="mt-4 max-w-3xl mx-auto text-lg text-slate-300">
+          Multidisciplinary student merging science, engineering, and creativity to drive global impact.
+        </p>
+        <p className="mt-3 text-slate-400">Fremont, CA · onlymanasa@gmail.com</p>
+      </header>
+
+      {/* Navigation */}
+      <nav className="sticky top-0 bg-white shadow z-10">
+        <ul className="flex flex-wrap justify-center gap-6 py-4 font-medium">
+          <li><a href="#about" className="hover:text-blue-600">About</a></li>
+          <li><a href="#research" className="hover:text-blue-600">Research</a></li>
+          <li><a href="#leadership" className="hover:text-blue-600">Leadership</a></li>
+          <li><a href="#creative" className="hover:text-blue-600">Creative</a></li>
+          <li><a href="#media" className="hover:text-blue-600">Media</a></li>
+          <li><a href="#links" className="hover:text-blue-600">Links</a></li>
+        </ul>
+      </nav>
+
+      {/* About */}
+      <Section id="about" title="About Me">
+        <p>
+          I am a high school student with deep interests in AI, quantum chemistry, cybersecurity,
+          engineering, and creative expression. My work spans research at Stanford University,
+          UTHSC, NUS, and VIT, leadership in large-scale robotics and nonprofit initiatives,
+          and artistic output through music and writing. I am driven by curiosity, rigor,
+          and a desire to apply STEM for global and social impact.
+        </p>
+      </Section>
+
+      {/* Research */}
+      <Section id="research" title="Research & Internships">
+        <Card>
+          <h3 className="font-semibold">VigilNZ Inc. – Software Developer Intern</h3>
+          <ul className="list-disc ml-5 mt-2">
+            <li>AI cybersecurity and model vulnerability detection</li>
+            <li>Led provisional patent on incremental streaming binary scanning</li>
+          </ul>
+        </Card>
+        <Card>
+          <h3 className="font-semibold">Stanford University – Nano Energy Lab</h3>
+          <ul className="list-disc ml-5 mt-2">
+            <li>Only high school researcher among graduate students</li>
+            <li>Quantum chemistry simulations using Stanford supercomputing resources</li>
+            <li>Published HOMO–LUMO gaps of PAH π-radicals</li>
+          </ul>
+        </Card>
+        <Card>
+          <h3 className="font-semibold">UTHSC & International Collaborations</h3>
+          <ul className="list-disc ml-5 mt-2">
+            <li>Protein modeling and SARS-CoV interaction research</li>
+            <li>Coauthored ACS Journal of Medicinal Chemistry paper</li>
+            <li>YogaVR: AI + IoT posture correction, accepted by IEEE Xplore</li>
+          </ul>
+        </Card>
+      </Section>
+
+      {/* Leadership */}
+      <Section id="leadership" title="Leadership & STEM Outreach">
+        <div className="grid md:grid-cols-2 gap-6">
+          <Card>
+            <h3 className="font-semibold">FTC Robotics – RoboRacers</h3>
+            <ul className="list-disc ml-5 mt-2">
+              <li>Software & Business Lead for 100+ members</li>
+              <li>Raised $10,000 in sponsorships</li>
+              <li>Contributor to FIRST open-source GAEL Drive</li>
+            </ul>
+          </Card>
+          <Card>
+            <h3 className="font-semibold">Learning Edge & Nonprofit Work</h3>
+            <ul className="list-disc ml-5 mt-2">
+              <li>STEM education for underserved youth in Congo and India</li>
+              <li>Presented curriculum at the U.S. Embassy in Congo</li>
+              <li>Designed inclusive curricula for neurodiverse learners</li>
+            </ul>
+          </Card>
+        </div>
+      </Section>
+
+      {/* Creative */}
+      <Section id="creative" title="Creative & Literary Work">
+        <Card>
+          <h3 className="font-semibold">Music – Spotify Artist & Composer</h3>
+          <p className="mt-2">
+            Classical Carnatic vocalist since age 6, exploring fusion with Western music.
+            Over 72,000 streams of original compositions.
+          </p>
+        </Card>
+        <Card>
+          <h3 className="font-semibold">Author – Cats, Coins and Chaos</h3>
+          <p className="mt-2">
+            An illustrated introduction to quantum mechanics, density functional theory,
+            and electron algorithms for young learners.
+          </p>
+          <a
+            href="https://books.google.com/books/about/Cats_Coins_and_Chaos.html?id=yiyq0QEACAAJ"
+            target="_blank"
+            className="text-blue-600 mt-2 inline-block"
+          >
+            View Book
+          </a>
+        </Card>
+      </Section>
+
+      {/* Media */}
+      <Section id="media" title="Media & Performances">
+        <div className="grid md:grid-cols-2 gap-6">
+          <iframe
+            className="w-full h-64 rounded-xl"
+            src="https://www.youtube.com/embed/toz05gfwkrA"
+            title="YouTube music"
+            allowFullScreen
+          />
+          <iframe
+            className="w-full h-64 rounded-xl"
+            src="https://www.youtube.com/embed/qY65ROHNYZ4"
+            title="YouTube music 2"
+            allowFullScreen
+          />
+          <iframe
+            className="w-full h-20 rounded-xl"
+            src="https://open.spotify.com/embed/track/5wWZGSMo2ZofoGVcewyxqu"
+            allow="encrypted-media"
+          />
+          <iframe
+            className="w-full h-20 rounded-xl"
+            src="https://open.spotify.com/embed/track/779aAw1mmWwlit2D48nshG"
+            allow="encrypted-media"
+          />
+        </div>
+      </Section>
+
+      {/* Links */}
+      <Section id="links" title="Academic & Professional Links">
+        <ul className="list-disc ml-5">
+          <li>
+            <a href="https://scholar.google.com/citations?user=8YWD2igAAAAJ&hl=en" target="_blank" className="text-blue-600">
+              Google Scholar Publications
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/manasa-raghuraman-018b68332/" target="_blank" className="text-blue-600">
+              LinkedIn Profile
+            </a>
+          </li>
+        </ul>
+      </Section>
+
+      <footer className="bg-slate-900 text-slate-400 text-center py-6">
+        © 2025 Manasa Raghuraman · College Admissions Portfolio
+      </footer>
+    </div>
+  );
+}
+
+function Section({ id, title, children }) {
+  return (
+    <section id={id} className="max-w-5xl mx-auto px-6 py-14">
+      <h2 className="text-3xl font-bold mb-6 border-b pb-2">{title}</h2>
+      <div className="space-y-6">{children}</div>
+    </section>
+  );
+}
+
+function Card({ children }) {
+  return (
+    <div className="bg-white rounded-2xl shadow-md p-6">
+      {children}
+    </div>
+  );
+}
